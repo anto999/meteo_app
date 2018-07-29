@@ -1,43 +1,48 @@
 body
 		{
 		background-image: url("https://www.rts.ch/2017/03/13/12/37/8457893.image");
-background-repeat: no-repeat;
-width: 1200px;
-height: 900;
-background-size: cover;
-padding-right: 300px;
+        background-repeat: no-repeat;
+        height: 900;
+        background-size: cover;
        
         }
-        
-        .Container
-        {
 
-            text-align: center;
-            width: 1800px;
-        height: 700;
-        position: relative;
-        padding-right: 300px;
-        background-image: url("https://www.rts.ch/2017/03/13/12/37/8457893.image");
-        background-size: contain;
+        #input1{
+        
+            border-radius: 50px;
+            font-size: 3em;
 
         }
+        #button{
+            border-radius: 50px;
+            color: white;
+            background-color: lightsalmon;
+            font-size: 3em;
 
-        input1{
-            padding-left: 300px;
-            margin-left: 300px;
         }
 
         h1{
-            color: green;
+            color: white;
 						text-align: center;
-						padding-right: 30,
+				font-size: 5em;
         }
 
-        .inpuput{
-            padding-left: 300px;
-            margin-left: 300px;
-        }
         #output{
-            background-color: red;
             color: white;
+            font-weight: bold;
+            font-size: 3em;
+            background-color: navy;
+            width: 800px;
+            height: auto;
+            margin-top:"100px";
+            padding-top:"100px";
+            border-top: "100px";
+            text-align: center;
+
         }
+
+        .corps{
+        text-align: center;  
+        padding-bottom: 100px;
+        margin-top:300px;
+}
