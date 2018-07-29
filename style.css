@@ -1,0 +1,43 @@
+body
+		{
+		background-image: url("https://www.rts.ch/2017/03/13/12/37/8457893.image");
+background-repeat: no-repeat;
+width: 1200px;
+height: 900;
+background-size: cover;
+padding-right: 300px;
+       
+        }
+        
+        .Container
+        {
+
+            text-align: center;
+            width: 1800px;
+        height: 700;
+        position: relative;
+        padding-right: 300px;
+        background-image: url("https://www.rts.ch/2017/03/13/12/37/8457893.image");
+        background-size: contain;
+
+        }
+
+        input1{
+            padding-left: 300px;
+            margin-left: 300px;
+        }
+
+        h1{
+            color: green;
+						text-align: center;
+						padding-right: 30,
+        }
+
+        .inpuput{
+            padding-left: 300px;
+            margin-left: 300px;
+        }
+        #output{
+            background-color: red;
+            color: white;
+        }

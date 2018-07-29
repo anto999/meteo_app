@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" />    
+    <title>MeteoByAnto</title>
+</head>
+<body>
+        <h1>Quel temps fait il chez vous?</h1>
+    <input id="input1" type="text">
+    <input id="button" type="button" value="Cliquer Ici">
+    
+        <div id ="output"></div>
+        <script>
+            const callMeteoApi = () => {
+             //   console.log(document.getElementById("input1").value)
+                const city = document.getElementById("input1").value
+                const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=90a067e51253ed544ba16f2f2356134a`
+           //     console.log(url)
+                fetch(url)
+                 .then((reponse) => {
+                    // console.log("response : "+ (response))
+                     return reponse.json()
+                   //  console.log("response : "+ (response))
+                 })            
+
+                 .then((meteo) => {
+                     //console.log(meteo.main.temp)
+                     output.innerHTML = `Il fait ${meteo.main.temp} à ${city} , le temps est clairement ${meteo.weather.main}`
+
+                 })
+               //  console.log("fin de la function")
+                 
+            }
+            const button = document.getElementById("button")
+       
+            console.log(button)
+            button.addEventListener('click', callMeteoApi)
+           
+        </script>
+        </div>
+</body>
+</html>
