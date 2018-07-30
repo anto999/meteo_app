@@ -10,11 +10,20 @@
 <body>
         <h1>Quel temps fait il chez vous?</h1>
            <div class = "corps" >
-            <input id="input1" type="text">
-            <input id="button" type="button" value=" demande moi !">
-        
-            <div id ="output"></div>
+            
+              <form id="myForm" style="display: inline;">
+                  <input id="input1" type="text" placeholder=" Entrez le nom d'un ville">
+                  <input id="button" type="button" value=" Demande moi !">        
+                  <div id ="output"></div>
+                  <input id="reset" type="button" value=" Recommencez !" onclick="input1.reset()">
+            </form>
             <script>
+
+
+               function reset() {
+                    document.getElementById("button").reset();
+                }
+
                 const callMeteoApi = () => {
                 //   console.log(document.getElementById("input1").value)
                     const city = document.getElementById("input1").value
@@ -29,18 +38,24 @@
 
                     .then((meteo) => {
                         //console.log(meteo.main.temp)
-                        output.innerHTML =  `Il fait ${meteo.main.temp}° à ${city} !`
+                        output.innerHTML =  `Il fait ${meteo.main.temp}° à ${city} et la vitesse du vent est de ${meteo.wind.speed} km/h !`
 
                     })
                 //  console.log("fin de la function")
                     
                 }
                 const button = document.getElementById("button")
+
+                
         
                 console.log(button)
                 button.addEventListener('click', callMeteoApi)
-            
+                
+               
             </script>
+            
+            
+
             </div>
         </div>
 </body>
